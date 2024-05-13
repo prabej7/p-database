@@ -1,6 +1,6 @@
 # pr-database
 
-pr-database is a simple and lightweight Node.js package for interacting with a database. It provides methods for creating, reading, updating, and deleting data from a database collection.
+pr-database is a simple and lightweight Node.js package for integrating database within a project. It provides methods for creating, reading, updating, and deleting data from a database collection.
 
 ## Installation
 
