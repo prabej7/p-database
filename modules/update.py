@@ -14,6 +14,7 @@ file_path = create_path(model_name)
 if check_file(file_path):
     data = pd.read_excel(file_path)
     data.loc[data[field]==value,field_to_change] = new_value
+    data.to_excel(file_path,index=False)
     print(data.query(f"{field}=='{new_value}'").to_json(orient='records'))
 else:
     print("not found")
