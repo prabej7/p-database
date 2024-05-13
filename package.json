@@ -1,5 +1,5 @@
 {
-  "name": "p-database",
+  "name": "pr-database",
   "version": "1.0.0",
   "description": "Take your database within your project file.",
   "main": "index.js",

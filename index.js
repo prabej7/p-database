@@ -2,7 +2,7 @@ const { spawn } = require('node:child_process');
 
 function createdb(model, fields) {
     return new Promise((resolve, reject) => {
-        const pythonProcess = spawn('python', ['./node_modules/p-database/modules/createdb.py', model, JSON.stringify(fields)]);
+        const pythonProcess = spawn('python', ['./node_modules/pr-database/modules/createdb.py', model, JSON.stringify(fields)]);
         let receivedData = '';
         pythonProcess.stdout.on("data", (data) => {
             receivedData += data;
@@ -25,7 +25,7 @@ function createdb(model, fields) {
 
 function create(model, entry) {
     return new Promise((resolve, reject) => {
-        const pythonProcess = spawn('python', ['./node_modules/p-database/modules/create.py', model, JSON.stringify(entry)]);
+        const pythonProcess = spawn('python', ['./node_modules/pr-database/modules/create.py', model, JSON.stringify(entry)]);
         let receivedData = '';
         pythonProcess.stdout.on("data", (data) => {
             receivedData += data;
@@ -50,7 +50,7 @@ function readQuery(model, field, value) {
         if (value==undefined){
             field = 0
         }
-        const pythonProcess = spawn('python', ['./node_modules/p-database/modules/read_query.py', model, field,value]);
+        const pythonProcess = spawn('python', ['./node_modules/pr-database/modules/read_query.py', model, field,value]);
         let receivedData = '';
         pythonProcess.stdout.on("data", (data) => {
             receivedData += data;
@@ -72,7 +72,7 @@ function readQuery(model, field, value) {
 
 function read(model) {
     return new Promise((resolve, reject) => {
-        const pythonProcess = spawn('python', ['./node_modules/p-database/modules/read.py', model]);
+        const pythonProcess = spawn('python', ['./node_modules/pr-database/modules/read.py', model]);
         let receivedData = '';
         pythonProcess.stdout.on("data", (data) => {
             receivedData += data;
@@ -94,7 +94,7 @@ function read(model) {
 
 function update(model,field,value,setValue,newValue) {
     return new Promise((resolve, reject) => {
-        const pythonProcess = spawn('python', ['./node_modules/p-database/modules/update.py',...arguments]);
+        const pythonProcess = spawn('python', ['./node_modules/pr-database/modules/update.py',...arguments]);
         let receivedData = '';
         pythonProcess.stdout.on("data", (data) => {
             receivedData += data;
@@ -116,7 +116,7 @@ function update(model,field,value,setValue,newValue) {
 
 function deleteRow(model,field,value) {
     return new Promise((resolve, reject) => {
-        const pythonProcess = spawn('python', ['./node_modules/p-database/modules/delete.py',...arguments]);
+        const pythonProcess = spawn('python', ['./node_modules/pr-database/modules/delete.py',...arguments]);
         let receivedData = '';
         pythonProcess.stdout.on("data", (data) => {
             receivedData += data;
@@ -138,7 +138,7 @@ function deleteRow(model,field,value) {
 
 function dropDatabase(model) {
     return new Promise((resolve, reject) => {
-        const pythonProcess = spawn('python', ['./node_modules/p-database/modules/deletedb.py',...arguments]);
+        const pythonProcess = spawn('python', ['./node_modules/pr-database/modules/deletedb.py',...arguments]);
         let receivedData = '';
         pythonProcess.stdout.on("data", (data) => {
             receivedData += data;
