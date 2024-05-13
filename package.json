@@ -11,10 +11,10 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/prabej7/p-database.git"
+    "url": "git+https://github.com/prabej7/pr-database.git"
   },
   "bugs": {
-    "url": "https://github.com/prabej7/p-database/issues"
+    "url": "https://github.com/prabej7/pr-database/issues"
   },
-  "homepage": "https://github.com/prabej7/p-database#readme"
+  "homepage": "https://github.com/prabej7/pr-database#readme"
 }
