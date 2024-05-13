@@ -1,6 +1,6 @@
 {
   "name": "pr-database",
-  "version": "1.0.2",
+  "version": "1.0.0",
   "description": "Take your database within your project file.",
   "main": "index.js",
   "scripts": {
